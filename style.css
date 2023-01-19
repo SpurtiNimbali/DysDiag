@@ -1,0 +1,459 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('dyslexia_bg.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    transition: all 0.3s ease-out;
+}
+
+.info_box{
+    min-height: 80%;
+    width: 70%;
+    border-radius: 2rem;
+    background-image: url("glass_bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(2rem);
+    text-align: center;
+}
+
+.info_box button{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    width: 100px;
+    height: 50px;
+    background: #d1a464;
+    border-radius: 10px;
+    border-width: 0px;;
+    box-shadow: 0 14px 26px rgba(0,0,0,0.04);
+    transition: all 0.3s ease-out;
+    font-size: 20px;
+    font-weight: 600;
+    color:rgb(54, 43, 28);
+    margin-bottom: 4%;
+    cursor: pointer;
+}
+
+.info_box button:hover {
+    background:#e4d2ba;
+    transform: translateY(-5px) scale(1.005) translateZ(0);
+    box-shadow: 0 24px 36px rgba(0,0,0,0.11),
+    0 24px 46px var(--box-shadow-color);
+}
+
+.info_box button .overlay {
+    transform: scale(4) translateZ(0);
+}
+
+.info_title{
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 10%;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    font-weight: 700;
+    color: rgb(255, 245, 232);
+}
+
+.info_text{
+    padding: 5% 5% 5% 5%;
+    font-family: "Nunito";
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+}
+
+.question-box{
+    display:none;
+    transform: translate(-50% -50%) scale(0.9);
+    min-height: 80%;
+    width: 70%;
+    border-radius: 2rem;
+    z-index: 3;
+    background-image: url("glass_bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(2rem);
+    text-align: center;
+}
+
+.ques_img{
+    padding-top: 5%;
+    height: 250px;
+    width: auto;
+}
+
+.ques_txt{
+    font-family: "Nunito";
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 27px;
+    font-weight: 600;
+    color: rgb(255, 245, 232);
+}
+
+.option_lst{
+    display: grid;
+    width:70%;
+    margin-left: 10%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    padding: 25px;
+}
+
+.option{
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.option:hover{
+    background: linear-gradient(to right bottom, rgba(255,255,255,0.7),rgba(255,255,255,0.3));
+}
+
+
+.option h4{
+    font-family: "Nunito";
+    font-size: 20px;
+    font-weight: 300;
+    color: rgb(255, 245, 232);
+}
+
+.opt_img{
+    height: 150px;
+    width: auto;
+}
+
+.transition_screen{
+    display: none;
+}
+
+.ques_footer{
+    margin-left: 7%;
+    padding-bottom: 30px;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0px 500px;
+}
+
+.ques-no{
+    padding-top: 7%;
+    font-family: "Nunito";
+    font-size: 20px;
+    font-weight: 300;
+    color: rgb(255, 245, 232);
+}
+
+.next_ques_but button{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    width: 80px;
+    height: 40px;
+    background: #d1a464;
+    border-radius: 10px;
+    border-width: 0px;;
+    box-shadow: 0 14px 26px rgba(0,0,0,0.04);
+    transition: all 0.3s ease-out;
+    font-size: 20px;
+    font-weight: 600;
+    color:rgb(54, 43, 28);
+    margin-bottom: 2%;
+    cursor: pointer;
+}
+
+.next_ques_but button:hover {
+    background:#e4d2ba;
+    box-shadow: 0 24px 36px rgba(0,0,0,0.11),
+    0 24px 46px var(--box-shadow-color);
+}
+
+
+.transition_screen{
+    display:none;
+    transform: translate(-50% -50%) scale(0.9);
+    min-height: 80%;
+    width: 70%;
+    border-radius: 2rem;
+    z-index: 3;
+    background-image: url("glass_bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(2rem);
+    text-align: center;
+}
+
+.thank_you{
+    margin-top: 10%;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    padding-left: 20%;
+    padding-right: 20%;
+    font-size: 60px;
+    font-weight: 600;
+    color: rgb(255, 245, 232);
+}
+
+.transition_txt{
+    margin: 3%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: "Nunito";
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+
+}
+
+.cont_but button{
+    margin-left: 3%;
+    padding: 15px;
+    height: 45px;
+    width: 120px;
+    padding-bottom: 25px;
+    background: #d1a464;
+    border-radius: 10px;
+    border-width: 0px;;
+    box-shadow: 0 14px 26px rgba(0,0,0,0.04);
+    transition: all 0.3s ease-out;
+    font-size: 20px;
+    font-weight: 600;
+    color:rgb(54, 43, 28);
+    margin-bottom: 4%;
+    cursor: pointer;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.cont_but button:hover {
+    background:#e4d2ba;
+    box-shadow: 0 24px 36px rgba(0,0,0,0.11),
+    0 24px 46px var(--box-shadow-color);
+}
+
+.questionnaire{
+    display: none;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 360vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    width: 70%;
+    border-radius: 2rem;
+    z-index: 3;
+    background-image: url("glass_bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    backdrop-filter: blur(2rem);
+    text-align: center;
+}
+
+
+.audio_img{
+    cursor: pointer;
+    height: 130px;
+    width: auto;
+}
+
+.ques-box{
+    margin-top: 2%;
+    padding: 10px;
+    margin-right: 10%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.ques-box2{
+    padding-left: 8%;
+    width: 100%;
+    text-align: left;
+    justify-content: left;
+    align-items: left;
+}
+
+.ques1{
+    text-align: left;
+    font-family: "Nunito";
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(255, 245, 232);
+}
+
+.ques{
+    text-align: left;
+    padding-top: 15px;
+    font-family: "Nunito";
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(255, 245, 232);
+}
+
+
+.submit button{
+    width: 100px;
+    height: 40px;
+    background: #d1a464;
+    border-radius: 10px;
+    border-width: 0px;;
+    box-shadow: 0 14px 26px rgba(0,0,0,0.04);
+    transition: all 0.3s ease-out;
+    font-size: 20px;
+    font-weight: 600;
+    color:rgb(54, 43, 28);
+    margin-top: 25px;
+    margin-bottom: 1%;
+    cursor: pointer;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.submit button:hover{
+    background:#e4d2ba;
+    box-shadow: 0 24px 36px rgba(0,0,0,0.11),
+    0 24px 46px var(--box-shadow-color);
+}
+
+.opts1{
+    justify-content: center;
+    display:grid;
+    width:90%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 15px;
+}
+
+.opts{
+    justify-content: center;
+    display:grid;
+    width:50%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    padding: 15px;
+}
+
+.opts_list{
+    background:#e4d2ba;
+    padding: 10px;
+    font-family: "Nunito";
+    font-size: 13px;
+    font-weight: 600;
+    color: rgb(39, 37, 35);
+    cursor: pointer;
+    height: 50px;
+    width: 120px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.opts_list1{
+    border-radius: 10px;
+    padding: 10px;
+    background:#e4d2ba;
+    height: 50px;
+    width: 120px;
+    font-family: "Nunito";
+    font-size: 13px;
+    font-weight: 600;
+    color: rgb(39, 37, 35);
+    display: block;
+    position: relative;
+    cursor: pointer;
+}
+
+.right{
+    padding-top: 25px;
+}
+.opts_list1:hover{
+    background: linear-gradient(to right bottom, rgba(255,255,255,0.7),rgba(255,255,255,0.3));
+}
+
+.end_screen{
+    display:none;
+    transform: translate(-50% -50%) scale(0.9);
+    min-height: 80%;
+    width: 70%;
+    border-radius: 2rem;
+    z-index: 3;
+    background-image: url("glass_bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(2rem);
+    text-align: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.res{
+    margin-top: 10%;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    padding-left: 20%;
+    padding-right: 20%;
+    font-size: 60px;
+    font-weight: 600;
+    color: rgb(255, 245, 232);
+}
+
+
+.res_txt{
+    margin: 3%;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-family: "Nunito";
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+
+}
+
+
+.exit_btn button{
+    width: 100px;
+    height: 40px;
+    background: #d1a464;
+    border-radius: 10px;
+    border-width: 0px;;
+    box-shadow: 0 14px 26px rgba(0,0,0,0.04);
+    transition: all 0.3s ease-out;
+    font-size: 20px;
+    font-weight: 600;
+    color:rgb(54, 43, 28);
+    margin-bottom: 5%;
+    cursor: pointer;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+
+}
+
+.exit_btn button:hover{
+    background:#e4d2ba;
+    box-shadow: 0 24px 36px rgba(0,0,0,0.11),
+    0 24px 46px var(--box-shadow-color);
+}
+
+
+
+
+
