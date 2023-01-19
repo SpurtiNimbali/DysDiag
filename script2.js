@@ -85,7 +85,7 @@ let questions=[
     },
     {
         num:8,
-        img: '<img src="MATH7.png" class="ques_img"></img>',
+        img: '<img src="MATH8.png" class="ques_img"></img>',
         question: "Which of the following is a right angle?",
         answer: "Option2",
         options: [
@@ -109,7 +109,7 @@ let questions=[
     },
     {
         num:10,
-        img: '<img src="MATH7.png" class="ques_img"></img>',
+        img: '<img src="MATH10.png" class="ques_img"></img>',
         question: "Which emoji wouldyou use to express how you feel while doing math?",
         answer: "Option2",
         options: [
