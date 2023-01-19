@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device.width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Dyslexia Quiz</title>
+</head>
+<body>
+    <div class="info_box" id="main">
+        <div class="info_title">
+            <span>Struggling to read? Take DysDiag's dyslexia assessment to find out.</span>
+        </div>
+        <div class="info_text">
+            <span>The following questions are designed to stimulate a starting point for an official diagnostic assessment for Dyslexia. Please only use this as an indicator.</span>
+        </div>
+        <div class="start_but">
+            <button id="start_btn">START</button>
+        </div>
+    </div>
+
+    <div class="question-box" id="ques">
+        <div class="ques-header">
+        </div>
+        <div class="ques_txt">
+        </div>
+        <div class="option_lst">
+        </div>
+        <div class="ques_footer">
+            <div class="ques-no">
+            </div>
+            <div class="next_ques_but">
+                <button id="next_btn">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="transition_screen" id="trans">
+        <div class="thank_you">
+            <span>Thank you for taking our test.</span>
+        </div>
+        <div class="transition_txt">
+            <span>The following questionnaire is required to be filled out by the child's parent/teacher/gaurdian.</span>
+        </div>
+        <div class="cont_but" id="cont">
+            <button id="cont">Continue</button>
+        </div>
+    </div>
+
+    <div class="questionnaire" id="part2">
+        <div class="ques-box">
+            <div class="left">
+                <img class="audio_img" id="1" src="1.png" onclick="playAudio('yellow.mp3')"></img>
+            </div>
+            <div class="right">
+                <div class="ques1">
+                    <span>Check the child's pronunciation of the given word</span>
+                </div>
+                <div class="opts1">
+                    <label class="opts_list1"><input type="radio" name="q1" value="c1">
+                    Correct
+                    </label>
+                    <label class="opts_list1"><input type="radio" name="q1" value="c2">
+                    Incorret
+                    </label>
+                    <label class="opts_list1"><input type="radio" name="q1" value="c3">
+                    No response
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="ques-box">
+            <div class="left">
+                <img class="audio_img" id="2" src="2.png" onclick="playAudio('squirrel.mp3')"></img>
+            </div>
+            <div class="right">
+                <div class="ques1">
+                    <span>Check the child's pronunciation of the given word</span>
+                </div>
+                <div class="opts1">
+                    <label class="opts_list1"><input type="radio" name="q2" value="c1">
+                    Correct
+                    </label>
+                    <label class="opts_list1"><input type="radio" name="q2" value="c2">
+                    Incorret
+                    </label>
+                    <label class="opts_list1"><input type="radio" name="q2" value="c3">
+                    No response
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="ques-box">
+            <div class="left">
+                <img class="audio_img" id="3" src="3.png" onclick="playAudio('object.mp3')"></img>
+            </div>
+            <div class="right">
+                <div class="ques1">
+                    <span>Check the child's pronunciation of the given word</span>
+                </div>
+                <div class="opts1">
+                    <label class="opts_list1"><input type="radio" name="q3" value="c1">
+                    Correct
+                    </label>
+                    <label class="opts_list1"><input type="radio" name="q3" value="c2">
+                    Incorret
+                    </label>
+                    <label class="opts_list1"><input type="radio" name="q3" value="c3">
+                    No response
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="ques-box">
+            <div class="left">
+                <img class="audio_img" id="4" src="4.png" onclick="playAudio('wave.mp3')"></img>
+            </div>
+            <div class="right">
+                <div class="ques1">
+                    <span>Check the child's pronunciation of the given word</span>
+                </div>
+                <div class="opts1">
+                    <label class="opts_list1"><input type="radio" name="q4" value="c1">
+                    Correct
+                    </label>
+                    <label class="opts_list1"><input type="radio" name="q4" value="c2">
+                    Incorret
+                    </label>
+                    <label class="opts_list1"><input type="radio" name="q4" value="c3">
+                    No response
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="ques-box">
+            <div class="left">
+                <img class="audio_img" id="5" src="5.png" onclick="playAudio('uncle.mp3')"></img>
+            </div>
+            <div class="right">
+                <div class="ques1">
+                    <span>Check the child's pronunciation of the given word</span>
+                </div>
+                <div class="opts1">
+                    <label class="opts_list1"><input type="radio" name="q5" value="c1">
+                    Correct
+                    </label>
+                    <label class="opts_list1"><input type="radio" name="q5" value="c2">
+                    Incorret
+                    </label>
+                    <label class="opts_list1"><input type="radio" name="q5" value="c3">
+                    No response
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="ques-box2">
+                <div class="ques">
+                    <span>Does the family have a history of learning disorders?
+                    </span>
+                </div>
+                <div class="opts">
+                    <label class="opts_list"><input type="radio" name="q6" value="c3">
+                    Yes
+                    </label>
+                    <label class="opts_list"><input type="radio" name="q6" value="c1">
+                    No
+                    </label>
+                </div>
+        </div>
+
+        <div class="ques-box2">
+            <div class="ques">
+                <span>Can the child sequence the alphabet, know the days of the week /days of the month in order? 
+                </span>
+            </div>
+            <div class="opts">
+                <label class="opts_list"><input type="radio" name="q7" value="c1">
+                Yes
+                </label>
+                <label class="opts_list"><input type="radio" name="q7" value="c3">
+                No
+                </label>
+            </div>
+        </div>
+        <div class="ques-box2">
+            <div class="ques">
+                <span>Does the child face difficulties while listening or remembering verbal instructions -particularly if there are more than one?</span>
+            </div>
+            <div class="opts">
+                <label class="opts_list"><input type="radio" name="q8" value="c3">
+                Yes
+                </label>
+                <label class="opts_list"><input type="radio" name="q8" value="c1">
+                No
+                </label>
+            </div>
+        </div>
+        <div class="ques-box2">
+            <div class="ques">
+                <span>Does the child confuse or forget the names of common household objects — calling a fork a spoon, for instance?
+                </span>
+            </div>
+            <div class="opts">
+                <label class="opts_list"><input type="radio" name="q9" value="c3">
+                Yes
+                </label>
+                <label class="opts_list"><input type="radio" name="q9" value="c1">
+                No
+                </label>
+            </div>
+        </div>
+        <div class="ques-box2">
+            <div class="ques">
+                <span>Is the child’s reading speed normal when compared to the mean value for the particular age group?
+                </span>
+            </div>
+            <div class="opts">
+                <label class="opts_list"><input type="radio" name="q10" value="c1">
+                Yes
+                </label>
+                <label class="opts_list"><input type="radio" name="q10" value="c3">
+                No
+                </label>
+            </div>
+        </div>
+        <div class="ques-box2">
+            <div class="ques">
+                <span>Is the child disorganised and often leaves sentences mid-way or expresses incomplete thoughts?</span>
+            </div>
+            <div class="opts">
+                <label class="opts_list"><input type="radio" name="q11" value="c3">
+                Yes
+                </label>
+                <label class="opts_list"><input type="radio" name="q11" value="c1">
+                No
+                </label>
+            </div>
+        </div>
+        <div class="ques-box2">
+            <div class="ques">
+                <span>Does the child hesitate when asked to read something out aloud?
+                </span>
+            </div>
+            <div class="opts">
+                <label class="opts_list"><input type="radio" name="q12" value="c3">
+                Yes
+                </label>
+                <label class="opts_list"><input type="radio" name="q12" value="c1">
+                No
+                </label>
+            </div>
+        </div>
+        <div class="ques-box2">
+            <div class="ques">
+                <span>Did the child ever complain of feeling or seeing non-existent movement while reading?
+                </span>
+            </div>
+            <div class="opts">
+                <label class="opts_list"><input type="radio" name="q13" value="c3">
+                Yes
+                </label>
+                <label class="opts_list"><input type="radio" name="q13" value="c1">
+                No
+                </label>
+            </div>
+        </div>
+        <div class="ques-box2">
+            <div class="ques">
+                <span>Does the child frequently Complain of dizziness, headaches or stomach aches while reading?</span>
+            </div>
+            <div class="opts">
+                <label class="opts_list"><input type="radio" name="q14" value="c3">
+                Yes
+                </label>
+                <label class="opts_list"><input type="radio" name="q14" value="c1">
+                No
+                </label>
+            </div>
+        </div>
+        <div class="ques-box2">
+            <div class="ques">
+                <span>Was the child able to pick up nursery rhymes quickly?</span>
+            </div>
+            <div class="opts">
+                <label class="opts_list"><input type="radio" name="q15" value="c1">
+                Yes
+                </label>
+                <label class="opts_list"><input type="radio" name="q15" value="c3">
+                No
+                </label>
+            </div>
+        </div>
+
+        <div class="submit">
+            <button id="submit_btn">Submit</button>
+        </div>
+    </div>
+
+    <div class="end_screen" id="end">
+        <div class="res">
+            <span>Thank you for taking our test.</span>
+        </div>
+        <div class="result_text">
+            
+        </div>
+        <div class="exit_btn" id="exit_btn">
+            <button id="exit">Exit</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="questions.js"></script>
+</body>
+</html>

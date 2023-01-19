@@ -1,0 +1,279 @@
+main {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    height: 50vh;
+    font-family: "Open Sans";
+}
+body{
+    height: 70vh;
+    padding-top: 0px;
+    margin-top:0px;
+    background-image: url('index_bg.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+#logo{
+    position: fixed;
+    z-index: 1;
+    top: -30px;
+    margin-top: 0px;
+    padding-top: 0px;
+    display: flex;
+    height: 160px;
+}
+
+:root{
+    --spacing-s: 8px;
+    --spacing-m: 16px;
+    --spacing-l: 24px;
+    --spacing-xl: 32px;
+    --spacing-xxl: 64px;
+}
+
+.dysgraphia{
+    --bg-color: #ffd861;
+    --bg-color-light: #ffeeba;
+    --text-color-hover: #4C5656;
+    --box-shadow-color: rgba(255, 215, 97, 0.48);
+}
+
+.dyslexia{
+    --bg-color: #B8F9D3;
+    --bg-color-light: #e2fced;
+    --text-color-hover: #4C5656;
+    --box-shadow-color: rgba(184, 249, 211, 0.48);
+}
+
+.dyscalculia{
+    --bg-color: #CEB2FC;
+    --bg-color-light: #F0E7FF;
+    --text-color-hover: #fff;
+    --box-shadow-color: rgba(206, 178, 252, 0.48);
+}
+
+.card-grid{
+    margin-left: 4%;
+    display: grid;
+    justify-content: space-around;
+    align-content: center;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: var(--spacing-xl);
+    max-width:1200px;
+    width: 100%;
+    margin-bottom: 10%;
+}
+
+@media(min-width: 440px){
+    .card-grid{
+        grid-template-columns: repeat(3, 1fr);
+        width: 120%
+    }
+    .card__category{
+        visibility: hidden;
+    }
+}
+
+@media(min-width:960px){
+    .card__category{
+        visibility: visible;
+    }
+}
+
+.card{
+    list-style: none;
+    position: relative;
+}
+
+.card:before{
+    content: '';
+    display: block;
+    padding-bottom: 150%;
+    width: 50%;
+}
+
+.card__background{
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--spacing-l);
+    bottom: 0;
+    opacity: 80%;
+    filter: brightness(0.95) saturate(1.2) contrast(0.90);
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform-origin: center;
+    transform: scale(1) translateZ(0);
+    transition:
+            filter 200ms linear,
+            transform 200ms linear;
+}
+
+.card:hover .card__background{
+    transform: scale(1.05) translateZ(0);
+}
+
+.card-grid:hover > .card:not(:hover) .card__background{
+    filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+}
+
+.card__content{
+    position: absolute;
+    top: 0;
+}
+
+.card__category{
+    padding-left: 4%;
+    padding-right: 4%;
+    margin-left: 3%;
+    margin-right: 3%;
+    font-family: "Berlin Sans FB";
+    color: floralwhite;
+    font-size: 1.0rem;
+    letter-spacing: 1px;
+    text-align: justify;
+    margin-bottom: var(--spacing-s);
+}
+
+.card__heading{
+    padding-bottom: 0px;
+    margin-top: 8%;
+    margin-bottom: 0%;
+    font-family: "Franklin Gothic Medium";
+    color: floralwhite;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+    line-height: 1.4;
+    text-align: center;
+    word-spacing: 100vw;
+}
+
+.card__subtitle{
+    font-family: "Lucida Handwriting";
+    font-size: 0.95rem;
+    color: rgba(0, 0, 0, 0.75);
+    text-align: center;
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-bottom: 10%;
+}
+
+.circle {
+    width: 115px;
+    height: 115px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease-out;
+}
+
+.circle:after {
+    content: "";
+    width: 108px;
+    height:108px;
+    display: block;
+    position: absolute;
+    background: var(--bg-color);
+    border-radius: 50%;
+    top: 4px;
+    left: 4px;
+    transition: opacity 0.3s ease-out;
+}
+
+.overlay {
+    width: 110px;
+    position: absolute;
+    height: 105px;
+    border-radius: 50%;
+    background: var(--bg-color);
+    top: 31px;
+    left: 110px;
+    z-index: 0;
+    transition: transform 0.3s ease-out;
+}
+
+#Topic{
+    text-align: center;
+    font-family: 'Comic Sans MS';
+    margin-bottom: 0%;
+    font-size: xx-large;
+    color: #093f5e;
+}
+
+.sqr {
+    width: 320px;
+    height: 221px;
+    background: #fff4e5;
+    padding-top: 7px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 14px 26px rgba(0,0,0,0.04);
+    transition: all 0.3s ease-out;
+    text-decoration: none;
+}
+
+.sqr:hover {
+    transform: translateY(-5px) scale(1.005) translateZ(0);
+    box-shadow: 0 24px 36px rgba(0,0,0,0.11),
+    0 24px 46px var(--box-shadow-color);
+}
+
+.sqr:hover .overlay {
+    transform: scale(4) translateZ(0);
+}
+
+.sqr:hover .circle {
+    border-color: var(--bg-color-light);
+    background: var(--bg-color);
+}
+
+.sqr:hover .circle:after {
+    background: var(--bg-color-light);
+}
+
+.sqr:hover p {
+    color: var(--text-color-hover);
+}
+
+.sqr:active {
+    transform: scale(1) translateZ(0);
+    box-shadow: 0 15px 24px rgba(0,0,0,0.11),
+    0 15px 24px var(--box-shadow-color);
+}
+
+.sqr p {
+    font-family: "Lucida Sans";
+    font-size: 20px;
+    color: #4C5656;
+    margin-top: 20px;
+    z-index: 1000;
+    transition: color 0.3s ease-out;
+}
+.div_grid {
+    display: grid;
+    width:90%;
+    margin-top: 7%;
+    margin-bottom: 7%;
+    margin-left: 7%;
+    margin-right: 4%;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 70px;
+}
+
+#cvr_img{
+    width: 100%;
+}
